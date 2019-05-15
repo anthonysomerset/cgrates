@@ -48,6 +48,7 @@ binary-arch: clean
 	mkdir -p $(PKGDIR)/var/lib/cgrates/history
 	mkdir -p $(PKGDIR)/var/lib/cgrates/cache_dump
 	mkdir -p $(PKGDIR)/var/log/cgrates
+	chown syslog:adm /var/log/cgrates
 	dh_strip
 	dh_compress
 	dh_fixperms
